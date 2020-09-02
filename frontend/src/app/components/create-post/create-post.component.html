@@ -1,0 +1,27 @@
+<button (click)="isOpen = !isOpen" mat-raised-button color="accent">
+  <mat-icon>add</mat-icon>Create post
+</button>
+<form
+  *ngIf="isOpen"
+  [formGroup]="form"
+  #formDirective="ngForm"
+  (ngSubmit)="onSubmit(form.value)"
+  novalidate
+>
+  <mat-form-field>
+    <mat-label>Post Title</mat-label>
+    <input matInput formControlName="title" />
+  </mat-form-field>
+  <mat-form-field>
+    <mat-label>Post body</mat-label>
+    <input matInput formControlName="body" />
+  </mat-form-field>
+  <button
+    color="accent"
+    [disabled]="!form.valid"
+    mat-raised-button
+    type="submit"
+  >
+    <span>Post</span>
+  </button>
+</form>

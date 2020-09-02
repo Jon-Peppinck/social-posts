@@ -1,0 +1,38 @@
+<mat-toolbar color="accent">
+  <span>
+    <a routerLink="/">
+      <span>Social Posts</span>
+    </a>
+  </span>
+  <span>
+    <a
+      *ngIf="isAuthenticated"
+      routerLinkActive="active-link"
+      routerLink="/posts"
+    >
+      <span>Posts</span>
+    </a>
+    <a
+      *ngIf="!isAuthenticated"
+      routerLinkActive="active-link"
+      routerLink="/login"
+    >
+      <span>Login</span>
+    </a>
+    <a
+      *ngIf="isAuthenticated"
+      (click)="logout()"
+      routerLinkActive="active-link"
+      routerLink="/login"
+    >
+      <span>Logout</span>
+    </a>
+    <a
+      *ngIf="!isAuthenticated"
+      routerLinkActive="active-link"
+      routerLink="/signup"
+    >
+      <span>Signup</span>
+    </a>
+  </span>
+</mat-toolbar>
