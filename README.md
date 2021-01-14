@@ -2,7 +2,7 @@
 
 ## Angular, Node, and MySQL
 
-1. Navigate to backend/config.json and change the password to your MySQL password.
+1. Navigate to backend/config/config.json and change the password to your MySQL password.
 
 ```json
 {
