@@ -16,6 +16,8 @@
 Note: For development purposes the host is localhost but this will need to be updated if you decide to deploy the application. By Default, MySQL gives the user 'root' with all privileges. You can simply change this to another user if desired. In this application we named our database 'posts', however, if you went with a different name this will need to be changed.
 
 2. cd backend
-3. \$ npm start
-4. cd ../frontend
-5. \$ npm start
+3. \$ npm install
+4. \$ npm start
+5. cd ../frontend
+6. \$ npm install
+7. \$ npm start
